@@ -34,5 +34,14 @@ public class OffersController {
 	public void setOffersService(OffersService offersService) {
 		this.offersService = offersService;
 	}
+	
+	@RequestMapping("/docreate")
+	public String doCreate(Model model,Offer offer) {
+		//request 파라미터 값이 offer로 자동으로 바인딩 됨
+		
+		offersService.insert(offer);
+		return "offercreated";
+	}
+
 
 }
