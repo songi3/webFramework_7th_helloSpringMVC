@@ -30,7 +30,7 @@ public class OffersController {
 
 	@RequestMapping("/createoffer")
 	public String createOffer(Model model) {
-
+		model.addAttribute(new Offer());
 		return "createoffer";
 	}
 
